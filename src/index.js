@@ -57,7 +57,12 @@ addBtn.addEventListener('click', () => {
     toyForm.style.display = 'none'
   }
 })
-
+//syntax for finding event target
+//const header was found through inspecting element on browser
+const header = document.querySelector("#firstHeading")
+header.addEventListener("click", function(e) {
+  console.log (e)
+})
 document.addEventListener("DOMContentLoaded", () => {
   const addBtn = document.querySelector("#new-toy-btn");
   const toyFormContainer = document.querySelector(".container");
