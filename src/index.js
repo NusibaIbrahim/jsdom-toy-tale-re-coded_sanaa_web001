@@ -9,6 +9,13 @@ function getToys() {
     .then(res => res.json())
 }
 
+getToys().then(toys => {
+  toys.forEach(toy => {
+    //function to render toys goes here or something
+    renderToys(toy)
+  })
+})
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const addBtn = document.querySelector("#new-toy-btn");
